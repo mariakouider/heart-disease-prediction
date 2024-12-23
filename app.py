@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
+import os
+
 
 # Load the pre-trained Random Forest model I made in assignment 1
 model_path = 'model/rf_model.pkl'
