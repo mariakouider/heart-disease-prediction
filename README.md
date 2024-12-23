@@ -101,7 +101,7 @@ The dataset used in this project is:
 - Introducing a confidence score for predictions.
 
 ## Personal Touch
-As a passionate advocate for data-driven healthcare solutions, I designed this project to combine simplicity with precision. The goal is to empower healthcare professionals with accessible machine learning tools that can aid in early detection and preventive care.
+As an analyst at MUHC, I bring my expertise in data analytics and healthcare supply chain to address critical challenges in the healthcare sector. As a passionate advocate for data-driven healthcare solutions, I designed this project to combine simplicity with precision, ensuring that complex machine learning tools are accessible and user-friendly for healthcare professionals. The goal is to empower medical teams with actionable insights, aiding in early detection of potential issues and enabling proactive, preventive care. By leveraging advanced analytics and innovative approaches, this project aims to improve patient outcomes while optimizing healthcare operations.
 
 ## Credits
 The dataset is sourced from Kaggle and the UCI Machine Learning Repository. Special thanks to the open-source community for providing tools that made this project possible.
