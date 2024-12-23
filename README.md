@@ -44,12 +44,40 @@ The dataset used in this project is:
    ```
 
 ## Usage
+### Local Deployment
 1. Run the Flask application:
    ```bash
    python app.py
    ```
 2. Open the browser and navigate to `http://127.0.0.1:5001`.
 3. Input the clinical data and click **Predict**.
+
+### Deployment on Heroku
+1. Ensure you have the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed and are logged in.
+2. Create a new Heroku app:
+   ```bash
+   heroku create <your-app-name>
+   ```
+3. Add the remote repository for Heroku:
+   ```bash
+   git remote add heroku https://git.heroku.com/<your-app-name>.git
+   ```
+4. Add a `Procfile` to your project with the following content:
+   ```text
+   web: python app.py
+   ```
+5. Push your code to Heroku:
+   ```bash
+   git push heroku main
+   ```
+6. Scale the web dynos:
+   ```bash
+   heroku ps:scale web=1
+   ```
+7. Open the app in your browser:
+   ```bash
+   heroku open
+   ```
 
 ## File Structure
 - **`app.py`**: Main application file.
@@ -64,7 +92,7 @@ The dataset used in this project is:
 - **Machine Learning Library**: Scikit-learn
 - **Visualization Libraries**: Matplotlib, Plotly
 - **User Guidance**: Integrated tooltips to explain input fields.
-- **Deployment**: Local deployment through Flask; can be extended for cloud services.
+- **Deployment**: Local deployment through Flask; can be extended for cloud services like Heroku.
 
 ## Future Improvements
 - Adding more visualizations for better interpretability.
@@ -77,5 +105,4 @@ As a passionate advocate for data-driven healthcare solutions, I designed this p
 
 ## Credits
 The dataset is sourced from Kaggle and the UCI Machine Learning Repository. Special thanks to the open-source community for providing tools that made this project possible.
-
 
