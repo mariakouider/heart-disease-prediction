@@ -58,6 +58,7 @@ def predict():
         # Handle other unexpected errors
         return render_template('result.html', error=f"Unexpected Error: {str(e)}")
 
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8080)
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
