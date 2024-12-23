@@ -6,7 +6,7 @@ import joblib
 
 
 # Load the pre-trained Random Forest model I made in assignment 1
-model_path = "model/rf_model.pkl"
+model_path = "model/random_forest_insy"
 rf_model = joblib.load(model_path)
 
 
