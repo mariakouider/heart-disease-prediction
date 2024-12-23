@@ -2,12 +2,13 @@ from flask import Flask, render_template, request
 import pickle
 import pandas as pd
 import os
+import joblib
 
 
 # Load the pre-trained Random Forest model I made in assignment 1
-model_path = 'model/rf_model.pkl'
-with open(model_path, 'rb') as file:
-    rf_model = pickle.load(file)
+model_path = "model/rf_model.pkl"
+rf_model = joblib.load(model_path)
+
 
 # Create Flask app
 app = Flask(__name__)
