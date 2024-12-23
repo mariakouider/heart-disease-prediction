@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score, roc_auc_score
 import pandas as pd
+import joblib
 
 # Load the dataset
 data_path = "data/heart.csv"
@@ -41,9 +42,15 @@ print("Model Evaluation:")
 print(f"Accuracy: {rf_accuracy:.2f}")
 print(f"ROC AUC: {rf_roc_auc:.2f}")
 
-# Save the trained Random Forest model using pickle
-model_path = "rf_model.pkl"
-with open(model_path, "wb") as file:
-    pickle.dump(rf_best_model, file)
+import joblib
+from sklearn.ensemble import RandomForestClassifier
 
+# Save the trained model
+model_path = "rf_model.pkl"
+joblib.dump(rf_best_model, model_path)
 print(f"Model saved to {model_path}")
+
+# Test loading the model
+loaded_model = joblib.load(model_path)
+print("Model loaded successfully")
+
